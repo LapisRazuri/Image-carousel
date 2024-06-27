@@ -19,6 +19,7 @@ export function nextImg() {
 
         currentIndex = nextIndex;
         console.log(currentIndex);
+        return nextIndex;
     } else {
         nextItem = images[0];
         nextIndex = images.indexOf(currentItem);
@@ -26,5 +27,6 @@ export function nextImg() {
         currentIndex = nextIndex;
         console.log(nextItem);
         console.log(currentIndex);
+        return nextIndex;
     };
 };

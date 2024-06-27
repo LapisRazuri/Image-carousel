@@ -12,7 +12,7 @@
     background: url('./icon.png');
   } */
 
-  .Hi {
-    color: green;
+  .img {
+    transition: transform 1s ease;
   }
   
