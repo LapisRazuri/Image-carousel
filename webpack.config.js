@@ -26,7 +26,8 @@ module.exports = {
     plugins:[
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            inject:'body',
+            inject:'head',
+            scriptLoading: 'defer'
         })
     ],
     module: {

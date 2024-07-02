@@ -1,32 +1,59 @@
 import { images } from './dom.js';
 
-let currentItem = images[0];
-let currentIndex = images.indexOf(currentItem);
-let nextItem = "";
-let nextIndex = ""
-console.log(currentItem)
+let item = images[0];
+let index = images.indexOf(item);
+
+console.log(item);
 
 
 export function nextImg() {
-    console.log(currentIndex);
+    let nextItem = "";
+    let nextIndex = "";
+    console.log(index);
     console.log(images.length);
 
-    if (currentIndex >= 0 && currentIndex < images.length - 1){
-        nextIndex = ( currentIndex + 1 );
+    if (index >= 0 && index < images.length - 1){
+        nextIndex = ( index + 1 );
         nextItem = images[nextIndex];
 
-        console.log(nextIndex)
+        console.log(nextIndex);
 
-        currentIndex = nextIndex;
-        console.log(currentIndex);
+        index = nextIndex;
+        console.log(index);
         return nextIndex;
     } else {
         nextItem = images[0];
-        nextIndex = images.indexOf(currentItem);
+        nextIndex = images.indexOf(nextItem);
 
-        currentIndex = nextIndex;
+        index = nextIndex;
         console.log(nextItem);
-        console.log(currentIndex);
+        console.log(index);
         return nextIndex;
+    };
+};
+
+
+export function previousImg() {
+    let previousItem = "";
+    let previousIndex = ""; 
+
+    if (index > 0 && index <= images.length - 1){
+        previousIndex = ( index - 1 );
+        previousItem = images[previousIndex];
+
+        console.log(previousIndex);
+
+        index = previousIndex;
+        console.log(index);
+        return previousIndex;
+    } else {
+        previousItem = images[3];
+        previousIndex = images.indexOf(previousItem);
+
+        index = previousIndex;
+
+        console.log(item);
+        console.log(index);
+        return previousIndex;
     };
 };

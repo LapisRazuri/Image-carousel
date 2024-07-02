@@ -1,14 +1,43 @@
 import './style.css';
-import { button } from './dom.js';
+import { next, previous, changeColor } from './dom.js';
 import { nextImg } from './next.js';
-import { display } from './hidden.js';
+import { previousImg } from './next.js';
+import { displayNext, displayPrevious } from './hidden.js';
+
+
+
+    // const img = document.createElement("div");
+    // const body = document.getElementsByTagName("body");
+
+    // const theCat = new Image();
+    // theCat.src = cat;
+
+    // console.log(theCat);
+    // console.log(body)
+
+    // body[0].appendChild(theCat);
+
+
 // import Icon from './icon.png';
 
 
 
-button.addEventListener( 'click', function () {
+
+
+
+next.addEventListener( 'click', function () {
     const nextIndex = nextImg();
-    display(nextIndex);
-} );
+    displayNext(nextIndex);
+    changeColor(nextIndex);
+    
+
+});
+
+previous.addEventListener('click', function () {
+    const previousIndex = previousImg();
+    displayPrevious(previousIndex);
+    changeColor(previousIndex);
+
+})
 
 

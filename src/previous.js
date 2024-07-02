@@ -1,16 +1,12 @@
-import { images } from './dom.js';
+// import { images } from './dom.js';
+// import { index } from './next.js';
 
-let currentItem = images[3];
-let nextItem = "";
+// let currentItem = images[0];
+// let currentIndex = images.indexOf(currentItem);
 
-function nextImg() {
-    if (index >= 0 && index < images.length - 1){
-        const currentIndex = images.indexOf(currentItem);
-        const nextIndex = ( currentIndex + 1 );
-              nextItem = images[nextIndex];
+const index = document.getElementById("notHidden");
 
-        currentItem = nextItem;
-    } else {
-        nextItem = images[0]
-    };
+export function currentImg() {
+
+
 };
