@@ -1,59 +1,57 @@
-import { images } from './dom.js';
+import { images } from "./dom.js";
 
 let item = images[0];
 let index = images.indexOf(item);
 
 console.log(item);
 
-
 export function nextImg() {
-    let nextItem = "";
-    let nextIndex = "";
+  let nextItem = "";
+  let nextIndex = "";
+  console.log(index);
+  console.log(images.length);
+
+  if (index >= 0 && index < images.length - 1) {
+    nextIndex = index + 1;
+    nextItem = images[nextIndex];
+
+    console.log(nextIndex);
+
+    index = nextIndex;
     console.log(index);
-    console.log(images.length);
+    return nextIndex;
+  } else {
+    nextItem = images[0];
+    nextIndex = images.indexOf(nextItem);
 
-    if (index >= 0 && index < images.length - 1){
-        nextIndex = ( index + 1 );
-        nextItem = images[nextIndex];
-
-        console.log(nextIndex);
-
-        index = nextIndex;
-        console.log(index);
-        return nextIndex;
-    } else {
-        nextItem = images[0];
-        nextIndex = images.indexOf(nextItem);
-
-        index = nextIndex;
-        console.log(nextItem);
-        console.log(index);
-        return nextIndex;
-    };
-};
-
+    index = nextIndex;
+    console.log(nextItem);
+    console.log(index);
+    return nextIndex;
+  }
+}
 
 export function previousImg() {
-    let previousItem = "";
-    let previousIndex = ""; 
+  let previousItem = "";
+  let previousIndex = "";
 
-    if (index > 0 && index <= images.length - 1){
-        previousIndex = ( index - 1 );
-        previousItem = images[previousIndex];
+  if (index > 0 && index <= images.length - 1) {
+    previousIndex = index - 1;
+    previousItem = images[previousIndex];
 
-        console.log(previousIndex);
+    console.log(previousIndex);
 
-        index = previousIndex;
-        console.log(index);
-        return previousIndex;
-    } else {
-        previousItem = images[3];
-        previousIndex = images.indexOf(previousItem);
+    index = previousIndex;
+    console.log(index);
+    return previousIndex;
+  } else {
+    previousItem = images[3];
+    previousIndex = images.indexOf(previousItem);
 
-        index = previousIndex;
+    index = previousIndex;
 
-        console.log(item);
-        console.log(index);
-        return previousIndex;
-    };
-};
+    console.log(item);
+    console.log(index);
+    return previousIndex;
+  }
+}
