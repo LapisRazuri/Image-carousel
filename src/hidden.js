@@ -2,21 +2,14 @@ const img0 = document.getElementById("0");
 
 img0.removeAttribute("hidden");
 
+
 export function displayNext(NextIndex) {
   const next = NextIndex;
   const nextImg = document.getElementById(next.toString());
 
-  console.log(next);
-  console.log(nextImg);
-
-  // image.removeAttribute("hidden");
-
   if (next > 0) {
     const index = next - 1;
     const image = document.getElementById(index.toString());
-
-    console.log(index);
-    console.log(image);
 
     image.setAttribute("hidden", "hidden");
 

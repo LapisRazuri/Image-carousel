@@ -1,4 +1,4 @@
-import { images } from "./dom.js";
+export const images = Array.from(document.getElementsByClassName("img"));
 
 let item = images[0];
 let index = images.indexOf(item);
@@ -55,3 +55,24 @@ export function previousImg() {
     return previousIndex;
   }
 }
+
+export function show( number ) {
+    const thisImage = document.getElementById(number.toString());
+
+    console.log(thisImage)
+    thisImage.removeAttribute("hidden");
+
+    index = number;
+
+    return thisImage;
+}
+
+export function hide(displayed, willDisplay) {
+    if (displayed !== willDisplay){
+        displayed.setAttribute('hidden', 'hidden');
+    }
+}
+
+    
+
+
