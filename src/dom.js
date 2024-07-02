@@ -1,3 +1,5 @@
+
+
 export const next = document.createElement("button");
 export const previous = document.createElement("button");
 export const container = document.getElementById("container");
@@ -20,8 +22,11 @@ export function changeColor (index) {
         alreadyColored[0].classList.remove("aquamarine");
     }
 
+    console.log(index)
     
     circles[index].classList.add("aquamarine");
 
 }
+
+
 

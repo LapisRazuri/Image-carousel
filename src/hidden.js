@@ -14,6 +14,7 @@ export function displayNext(NextIndex) {
     image.setAttribute("hidden", "hidden");
 
     nextImg.removeAttribute("hidden");
+    
   } else {
     const index = 3;
     const image = document.getElementById(index.toString());

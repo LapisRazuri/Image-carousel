@@ -1,10 +1,10 @@
 import "./style.css";
-import { next, previous, changeColor, circles } from "./dom.js";
-import { nextImg, show, hide } from "./next.js";
-import { previousImg } from "./next.js";
+import { next, previous, changeColor, circles, zoomIn } from "./dom.js";
+import { nextImg, show, hide, changeIndex } from "./next.js";
+import { previousImg, images } from "./next.js";
 import { displayNext, displayPrevious } from "./hidden.js";
 import { pic0, pic1, pic2, pic3} from "./image.js"
-import { circle0, theOneDisplayed } from "./currentDisplay.js";
+import { theOneDisplayed } from "./currentDisplay.js";
 
 
 next.addEventListener("click", function () {
@@ -29,6 +29,21 @@ circles.forEach(function(circle, index) {
         changeColor(index);
     } )
 })
+
+
+setInterval(function () {
+            
+    const next = nextImg();
+
+    console.log(next)
+    displayNext(next);
+    
+    changeIndex(next);
+    changeColor(next);
+    images[next].classList.add("zoom-in");
+    images[next].classList.add("fade");
+
+}, 7000)
 
 
 

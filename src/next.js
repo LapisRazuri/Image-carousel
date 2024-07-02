@@ -1,9 +1,14 @@
 export const images = Array.from(document.getElementsByClassName("img"));
 
+import { changeColor } from "./dom";
 let item = images[0];
 let index = images.indexOf(item);
 
-console.log(item);
+changeColor(index);
+images[index].classList.add("zoom-in");
+images[index].classList.add("fade");
+
+
 
 export function nextImg() {
   let nextItem = "";
@@ -72,6 +77,19 @@ export function hide(displayed, willDisplay) {
         displayed.setAttribute('hidden', 'hidden');
     }
 }
+
+export function changeIndex (indexNo) {
+
+    index = indexNo
+
+}
+
+
+
+
+        
+ 
+
 
     
 
