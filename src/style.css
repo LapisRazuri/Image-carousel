@@ -41,14 +41,17 @@ body {
 
 .btn {
   width: 50px;
-  height: 5px;
+  height: max-content;
   background:  #219ebc;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 6px 5px 4px 5px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 1, 0.1);
   transition: all 0.3s ease;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 10px;
 }
 
 .circleContainer {

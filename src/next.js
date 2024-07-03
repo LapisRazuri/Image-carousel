@@ -79,7 +79,6 @@ export function hide(displayed, willDisplay) {
 }
 
 export function changeIndex (indexNo) {
-
     index = indexNo
 
 }
